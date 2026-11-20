@@ -505,3 +505,28 @@ footer span {
         max-width: 280px;
     }
 }
+.music-player {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    background: #f4a6b8;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 13px 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
+
+.music-player:hover {
+    background: #e88da4;
+    transform: translateY(-3px);
+}
+
+.music-player span {
+    margin-left: 6px;
+}
