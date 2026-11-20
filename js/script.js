@@ -1,35 +1,35 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () {
 
-    // Smooth reveal for the reasons cards
-    const reasonCards = document.querySelectorAll(".reason-card");
+    const audio = new Audio("music/house.mp3");
+    audio.loop = true;
+    audio.volume = 0.35;
 
-    if ("IntersectionObserver" in window) {
+    const player = document.createElement("button");
 
-        const observer = new IntersectionObserver((entries) => {
+    player.className = "music-player";
+    player.innerHTML = "♫ <span>Play our song</span>";
 
-            entries.forEach((entry) => {
+    document.body.appendChild(player);
 
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
-                }
+    let isPlaying = false;
 
-            });
+    player.addEventListener("click", async () => {
 
-        }, {
-            threshold: 0.1
-        });
+        if (!isPlaying) {
+            try {
+                await audio.play();
+                isPlaying = true;
+                player.innerHTML = "Ⅱ <span>Pause music</span>";
+            } catch (error) {
+                console.error("Music playback failed:", error);
+            }
 
-        reasonCards.forEach((card) => {
-            observer.observe(card);
-        });
+        } else {
+            audio.pause();
+            isPlaying = false;
+            player.innerHTML = "♫ <span>Play our song</span>";
+        }
 
-    } else {
-
-        reasonCards.forEach((card) => {
-            card.classList.add("visible");
-        });
-
-    }
+    });
 
 });
