@@ -13,7 +13,15 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(player);
 
     let isPlaying = false;
+audio.addEventListener("pause", function () {
+    isPlaying = false;
+    player.innerHTML = "♫ <span>Play our song</span>";
+});
 
+audio.addEventListener("play", function () {
+    isPlaying = true;
+    player.innerHTML = "Ⅱ <span>Pause music</span>";
+});
     player.addEventListener("click", async function () {
         if (!isPlaying) {
             try {
