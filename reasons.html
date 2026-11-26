@@ -4,14 +4,206 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="theme-color" content="#faf6f0">
+
     <title>50 Little Things | For Tonti ♡</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .reasons-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 75px 24px 100px;
+        }
+
+        .reasons-heading {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 65px;
+        }
+
+        .reasons-heading .eyebrow {
+            color: var(--champagne);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 24px;
+        }
+
+        .reasons-heading .eyebrow span {
+            display: inline-block;
+            width: 25px;
+            height: 1px;
+            background: var(--champagne);
+            vertical-align: middle;
+            margin: 0 10px 3px;
+        }
+
+        .reasons-heading h1 {
+            color: var(--burgundy);
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 7vw, 68px);
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 22px;
+        }
+
+        .reasons-heading h1 em {
+            color: var(--rose);
+            font-weight: 400;
+        }
+
+        .reasons-heading .section-intro {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.9;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .reasons-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 35px 0 0;
+        }
+
+        .reasons-divider span {
+            width: 55px;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .reasons-divider .heart {
+            color: var(--champagne);
+            font-size: 18px;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 17px;
+        }
+
+        .reason-card {
+            position: relative;
+            min-height: 125px;
+            padding: 27px 28px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: var(--ivory);
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            box-shadow: var(--soft-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease,
+                        border-color 0.3s ease;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--dusty-rose);
+            box-shadow: var(--shadow);
+        }
+
+        .reason-number {
+            flex-shrink: 0;
+            width: 39px;
+            height: 39px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--dusty-rose);
+            border-radius: 50%;
+            color: var(--rose);
+            font-family: 'Playfair Display', serif;
+            font-size: 15px;
+        }
+
+        .reason-text {
+            color: var(--text);
+            font-size: 14px;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        .reasons-ending {
+            max-width: 650px;
+            margin: 75px auto 35px;
+            padding: 45px 25px;
+            text-align: center;
+            background: var(--deep-burgundy);
+            border-radius: 5px;
+            color: var(--ivory);
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(23px, 4vw, 32px);
+            line-height: 1.6;
+        }
+
+        .reasons-ending span {
+            display: block;
+            color: var(--dusty-rose);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            letter-spacing: 3px;
+            margin-bottom: 17px;
+        }
+
+        .reasons-ending .ending-heart {
+            display: block;
+            color: var(--champagne);
+            font-size: 22px;
+            margin-top: 18px;
+        }
+
+        .reasons-button-wrap {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        @media (max-width: 650px) {
+            .reasons-section {
+                padding: 55px 18px 75px;
+            }
+
+            .reasons-heading {
+                margin-bottom: 45px;
+            }
+
+            .reasons-grid {
+                grid-template-columns: 1fr;
+                gap: 13px;
+            }
+
+            .reason-card {
+                min-height: 105px;
+                padding: 22px 20px;
+                gap: 15px;
+            }
+
+            .reason-number {
+                width: 34px;
+                height: 34px;
+                font-size: 13px;
+            }
+
+            .reason-text {
+                font-size: 13px;
+            }
+
+            .reasons-ending {
+                margin-top: 55px;
+                padding: 35px 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -28,84 +220,147 @@
 
         <section class="reasons-section">
 
-            <p class="eyebrow">
-                <span></span>
-                A FEW THINGS I ADORE
-                <span></span>
-            </p>
+            <div class="reasons-heading">
 
-            <h1 class="page-title">
-                Little things<br>
-                <em>I love about you.</em>
-            </h1>
+                <p class="eyebrow">
+                    <span></span>
+                    A FEW THINGS I ADORE
+                    <span></span>
+                </p>
 
-            <p class="section-intro">
-                I could probably come up with a thousand more,
-                but here are fifty things I wanted you to know.
-            </p>
+                <h1>
+                    Little things<br>
+                    <em>I love about you.</em>
+                </h1>
+
+                <p class="section-intro">
+                    I could probably come up with a thousand more,
+                    but here are fifty things I wanted you to know.
+                </p>
+
+                <div class="reasons-divider">
+                    <span></span>
+                    <div class="heart">♡</div>
+                    <span></span>
+                </div>
+
+            </div>
 
             <div class="reasons-grid">
 
-                <div class="reason-card">I love you because you make me genuinely happy.</div>
-                <div class="reason-card">I love the way you talk to me.</div>
-                <div class="reason-card">I love the way you make me feel wanted.</div>
-                <div class="reason-card">I love how you can change my entire mood without trying.</div>
-                <div class="reason-card">I love your voice.</div>
-                <div class="reason-card">I love how beautiful you are.</div>
-                <div class="reason-card">I love the way you look at me.</div>
-                <div class="reason-card">I love how you make me feel understood.</div>
-                <div class="reason-card">I love your sense of humor.</div>
-                <div class="reason-card">I love how you pay attention to little things.</div>
-                <div class="reason-card">I love your smile.</div>
-                <div class="reason-card">I love how you make me laugh all the time.</div>
-                <div class="reason-card">I love your eyes.</div>
-                <div class="reason-card">I love how you make me feel comfortable.</div>
-                <div class="reason-card">I love how you talk.</div>
-                <div class="reason-card">I love how you can make me smile even without knowing.</div>
-                <div class="reason-card">I love how honest you are.</div>
-                <div class="reason-card">I love that you laugh at my jokes.</div>
-                <div class="reason-card">I love how you tell me what's on your mind.</div>
-                <div class="reason-card">I love how you can be both cute and annoying.</div>
-                <div class="reason-card">I love how you kiss me.</div>
-                <div class="reason-card">I love how much fun I have with you.</div>
-                <div class="reason-card">I love how you always have something to say.</div>
-                <div class="reason-card">I love it when you get mad at me.</div>
-                <div class="reason-card">I love the way you kiss me.</div>
-                <div class="reason-card">I love how you hold me.</div>
-                <div class="reason-card">I love how you make me look forward to seeing you.</div>
-                <div class="reason-card">I love how I can spend hours talking to you.</div>
-                <div class="reason-card">I love how you make me want to understand you better.</div>
-                <div class="reason-card">I love how you remember things I've told you.</div>
-                <div class="reason-card">I love how you have opinions of your own.</div>
-                <div class="reason-card">I love that I can text you at any time of the day.</div>
-                <div class="reason-card">I love how passionate you get about the things you love.</div>
-                <div class="reason-card">I love how much you love your siblings and mum.</div>
-                <div class="reason-card">I love how protective you are.</div>
-                <div class="reason-card">I love how thoughtful you are.</div>
-                <div class="reason-card">I love how much you value your friendships.</div>
-                <div class="reason-card">I love how you get excited about the things that interest you.</div>
-                <div class="reason-card">I love how intelligent and smart you are.</div>
-                <div class="reason-card">I love how we laugh at the same jokes.</div>
-                <div class="reason-card">I love how we have our own inside jokes.</div>
-                <div class="reason-card">I love how we get each other's references.</div>
-                <div class="reason-card">I love how we can be weird around each other.</div>
-                <div class="reason-card">I love how we never have to force a conversation.</div>
-                <div class="reason-card">I love how you make me feel appreciated.</div>
-                <div class="reason-card">I love how you compliment me.</div>
-                <div class="reason-card">I love how you make me feel special.</div>
-                <div class="reason-card">I love the way you love me.</div>
-                <div class="reason-card">I love how you reassure me.</div>
-                <div class="reason-card">I love that you're never scared to say you're upset or mad.</div>
+                <div class="reason-card"><span class="reason-number">01</span><p class="reason-text">I love you because you make me genuinely happy.</p></div>
+
+                <div class="reason-card"><span class="reason-number">02</span><p class="reason-text">I love the way you talk to me.</p></div>
+
+                <div class="reason-card"><span class="reason-number">03</span><p class="reason-text">I love the way you make me feel wanted.</p></div>
+
+                <div class="reason-card"><span class="reason-number">04</span><p class="reason-text">I love how you can change my entire mood without trying.</p></div>
+
+                <div class="reason-card"><span class="reason-number">05</span><p class="reason-text">I love your voice.</p></div>
+
+                <div class="reason-card"><span class="reason-number">06</span><p class="reason-text">I love how beautiful you are.</p></div>
+
+                <div class="reason-card"><span class="reason-number">07</span><p class="reason-text">I love the way you look at me.</p></div>
+
+                <div class="reason-card"><span class="reason-number">08</span><p class="reason-text">I love how you make me feel understood.</p></div>
+
+                <div class="reason-card"><span class="reason-number">09</span><p class="reason-text">I love your sense of humor.</p></div>
+
+                <div class="reason-card"><span class="reason-number">10</span><p class="reason-text">I love how you pay attention to little things.</p></div>
+
+                <div class="reason-card"><span class="reason-number">11</span><p class="reason-text">I love your smile.</p></div>
+
+                <div class="reason-card"><span class="reason-number">12</span><p class="reason-text">I love how you make me laugh all the time.</p></div>
+
+                <div class="reason-card"><span class="reason-number">13</span><p class="reason-text">I love your eyes.</p></div>
+
+                <div class="reason-card"><span class="reason-number">14</span><p class="reason-text">I love how you make me feel comfortable.</p></div>
+
+                <div class="reason-card"><span class="reason-number">15</span><p class="reason-text">I love how you talk.</p></div>
+
+                <div class="reason-card"><span class="reason-number">16</span><p class="reason-text">I love how you can make me smile even without knowing.</p></div>
+
+                <div class="reason-card"><span class="reason-number">17</span><p class="reason-text">I love how honest you are.</p></div>
+
+                <div class="reason-card"><span class="reason-number">18</span><p class="reason-text">I love that you laugh at my jokes.</p></div>
+
+                <div class="reason-card"><span class="reason-number">19</span><p class="reason-text">I love how you tell me what's on your mind.</p></div>
+
+                <div class="reason-card"><span class="reason-number">20</span><p class="reason-text">I love how you can be both cute and annoying.</p></div>
+
+                <div class="reason-card"><span class="reason-number">21</span><p class="reason-text">I love how you kiss me.</p></div>
+
+                <div class="reason-card"><span class="reason-number">22</span><p class="reason-text">I love how much fun I have with you.</p></div>
+
+                <div class="reason-card"><span class="reason-number">23</span><p class="reason-text">I love how you always have something to say.</p></div>
+
+                <div class="reason-card"><span class="reason-number">24</span><p class="reason-text">I love it when you get mad at me.</p></div>
+
+                <div class="reason-card"><span class="reason-number">25</span><p class="reason-text">I love the way you kiss me.</p></div>
+
+                <div class="reason-card"><span class="reason-number">26</span><p class="reason-text">I love how you hold me.</p></div>
+
+                <div class="reason-card"><span class="reason-number">27</span><p class="reason-text">I love how you make me look forward to seeing you.</p></div>
+
+                <div class="reason-card"><span class="reason-number">28</span><p class="reason-text">I love how I can spend hours talking to you.</p></div>
+
+                <div class="reason-card"><span class="reason-number">29</span><p class="reason-text">I love how you make me want to understand you better.</p></div>
+
+                <div class="reason-card"><span class="reason-number">30</span><p class="reason-text">I love how you remember things I've told you.</p></div>
+
+                <div class="reason-card"><span class="reason-number">31</span><p class="reason-text">I love how you have opinions of your own.</p></div>
+
+                <div class="reason-card"><span class="reason-number">32</span><p class="reason-text">I love that I can text you at any time of the day.</p></div>
+
+                <div class="reason-card"><span class="reason-number">33</span><p class="reason-text">I love how passionate you get about the things you love.</p></div>
+
+                <div class="reason-card"><span class="reason-number">34</span><p class="reason-text">I love how much you love your siblings and mum.</p></div>
+
+                <div class="reason-card"><span class="reason-number">35</span><p class="reason-text">I love how protective you are.</p></div>
+
+                <div class="reason-card"><span class="reason-number">36</span><p class="reason-text">I love how thoughtful you are.</p></div>
+
+                <div class="reason-card"><span class="reason-number">37</span><p class="reason-text">I love how much you value your friendships.</p></div>
+
+                <div class="reason-card"><span class="reason-number">38</span><p class="reason-text">I love how you get excited about the things that interest you.</p></div>
+
+                <div class="reason-card"><span class="reason-number">39</span><p class="reason-text">I love how intelligent and smart you are.</p></div>
+
+                <div class="reason-card"><span class="reason-number">40</span><p class="reason-text">I love how we laugh at the same jokes.</p></div>
+
+                <div class="reason-card"><span class="reason-number">41</span><p class="reason-text">I love how we have our own inside jokes.</p></div>
+
+                <div class="reason-card"><span class="reason-number">42</span><p class="reason-text">I love how we get each other's references.</p></div>
+
+                <div class="reason-card"><span class="reason-number">43</span><p class="reason-text">I love how we can be weird around each other.</p></div>
+
+                <div class="reason-card"><span class="reason-number">44</span><p class="reason-text">I love how we never have to force a conversation.</p></div>
+
+                <div class="reason-card"><span class="reason-number">45</span><p class="reason-text">I love how you make me feel appreciated.</p></div>
+
+                <div class="reason-card"><span class="reason-number">46</span><p class="reason-text">I love how you compliment me.</p></div>
+
+                <div class="reason-card"><span class="reason-number">47</span><p class="reason-text">I love how you make me feel special.</p></div>
+
+                <div class="reason-card"><span class="reason-number">48</span><p class="reason-text">I love the way you love me.</p></div>
+
+                <div class="reason-card"><span class="reason-number">49</span><p class="reason-text">I love how you reassure me.</p></div>
+
+                <div class="reason-card"><span class="reason-number">50</span><p class="reason-text">I love that you're never scared to say you're upset or mad.</p></div>
 
             </div>
 
             <div class="reasons-ending">
-                And somehow, this is still only fifty. ♡
+                <span>AND THERE'S SO MUCH MORE</span>
+                And somehow, this is still only fifty.
+                <span class="ending-heart">♡</span>
             </div>
 
-            <a class="button" href="question.html">
-                One last thing... <span>→</span>
-            </a>
+            <div class="reasons-button-wrap">
+                <a class="button" href="question.html">
+                    One last thing... <span>→</span>
+                </a>
+            </div>
 
         </section>
 
