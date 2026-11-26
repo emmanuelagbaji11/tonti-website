@@ -3,15 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#faf6f0">
 
     <title>She Said Yes! | For Tonti ♡</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .answer-section {
+            min-height: 80vh;
+            padding: 75px 22px 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .answer-card {
+            width: 100%;
+            max-width: 760px;
+            padding: 65px 50px;
+            background: var(--ivory);
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .answer-card::before,
+        .answer-card::after {
+            content: "♡";
+            position: absolute;
+            color: var(--dusty-rose);
+            opacity: 0.3;
+            font-family: 'Playfair Display', serif;
+            pointer-events: none;
+        }
+
+        .answer-card::before {
+            top: 12px;
+            left: 18px;
+            font-size: 75px;
+            transform: rotate(-20deg);
+        }
+
+        .answer-card::after {
+            bottom: 5px;
+            right: 18px;
+            font-size: 85px;
+            transform: rotate(20deg);
+        }
+
+        .answer-eyebrow {
+            position: relative;
+            z-index: 1;
+            color: var(--champagne);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+        }
+
+        .answer-eyebrow span {
+            display: inline-block;
+            width: 25px;
+            height: 1px;
+            background: var(--champagne);
+            vertical-align: middle;
+            margin: 0 9px 3px;
+        }
+
+        .celebration-heart {
+            position: relative;
+            z-index: 1;
+            width: 75px;
+            height: 75px;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--light-orange);
+            border: 1px solid var(--dusty-rose);
+            border-radius: 50%;
+            color: var(--rose);
+            font-size: 32px;
+            animation: heartBeat 1.8s ease-in-out infinite;
+        }
+
+        @keyframes heartBeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            15% {
+                transform: scale(1.12);
+            }
+            30% {
+                transform: scale(1);
+            }
+            45% {
+                transform: scale(1.08);
+            }
+        }
+
+        .answer-card h1 {
+            position: relative;
+            z-index: 1;
+            color: var(--burgundy);
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(55px, 9vw, 85px);
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .answer-card h1 em {
+            color: var(--rose);
+            font-weight: 400;
+        }
+
+        .answer-intro {
+            position: relative;
+            z-index: 1;
+            max-width: 450px;
+            margin: 0 auto;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .answer-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 13px;
+            margin: 35px 0;
+        }
+
+        .answer-divider span {
+            width: 48px;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .answer-divider i {
+            color: var(--champagne);
+            font-size: 17px;
+            font-style: normal;
+        }
+
+        .answer-message {
+            position: relative;
+            z-index: 1;
+            max-width: 540px;
+            margin: 0 auto 35px;
+            padding: 35px 38px;
+            background: var(--cream);
+            border-left: 2px solid var(--champagne);
+            text-align: left;
+        }
+
+        .answer-message p {
+            color: var(--text);
+            font-size: 14px;
+            line-height: 2;
+            margin-bottom: 19px;
+        }
+
+        .answer-message p:last-child {
+            margin-bottom: 0;
+            color: var(--burgundy);
+            font-family: 'Playfair Display', serif;
+            font-size: 17px;
+            font-style: italic;
+        }
+
+        .answer-signature {
+            position: relative;
+            z-index: 1;
+            margin: 0 0 35px;
+            color: var(--champagne);
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        .answer-card .button {
+            position: relative;
+            z-index: 1;
+        }
+
+        .answer-footer-note {
+            margin-top: 30px;
+            color: var(--muted);
+            font-size: 10px;
+            letter-spacing: 3px;
+        }
+
+        @media (max-width: 600px) {
+            .answer-section {
+                padding: 50px 17px 75px;
+                min-height: auto;
+            }
+
+            .answer-card {
+                padding: 48px 22px;
+            }
+
+            .answer-message {
+                padding: 27px 22px;
+            }
+
+            .answer-message p {
+                font-size: 13px;
+            }
+
+            .answer-card::before {
+                font-size: 55px;
+                left: 8px;
+            }
+
+            .answer-card::after {
+                font-size: 60px;
+                right: 8px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -28,44 +251,62 @@
 
         <section class="answer-section">
 
-            <p class="eyebrow">
-                <span></span>
-                THIS MAKES ME SO HAPPY
-                <span></span>
-            </p>
+            <div class="answer-card">
 
-            <div class="celebration-heart">♥</div>
-
-            <h1 class="page-title">
-                It's a <em>yes!</em>
-            </h1>
-
-            <p class="section-intro">
-                Tonti, I don't think you understand how happy
-                this makes me.
-            </p>
-
-            <div class="answer-message">
-
-                <p>
-                    I'm really happy that I get to call you my girlfriend.
+                <p class="answer-eyebrow">
+                    <span></span>
+                    THIS MAKES ME SO HAPPY
+                    <span></span>
                 </p>
 
-                <p>
-                    I know this is just the beginning, but I can't wait
-                    for all the memories, laughs, conversations and
-                    little moments we'll get to share.
+                <div class="celebration-heart">♥</div>
+
+                <h1>
+                    It's a <em>yes!</em>
+                </h1>
+
+                <p class="answer-intro">
+                    Tonti, I don't think you understand how happy
+                    this makes me.
                 </p>
 
-                <p>
-                    Thank you for being you. I'm really glad it's you. ♡
+                <div class="answer-divider">
+                    <span></span>
+                    <i>♡</i>
+                    <span></span>
+                </div>
+
+                <div class="answer-message">
+
+                    <p>
+                        I'm really happy that I get to call you my girlfriend.
+                    </p>
+
+                    <p>
+                        I know this is just the beginning, but I can't wait
+                        for all the memories, laughs, conversations and
+                        little moments we'll get to share.
+                    </p>
+
+                    <p>
+                        Thank you for being you. I'm really glad it's you. ♡
+                    </p>
+
+                </div>
+
+                <div class="answer-signature">
+                    Here's to us. ♡
+                </div>
+
+                <a href="index.html" class="button">
+                    Back to the beginning <span>♡</span>
+                </a>
+
+                <p class="answer-footer-note">
+                    A LITTLE WEBSITE, A SPECIAL QUESTION
                 </p>
 
             </div>
-
-            <a href="index.html" class="button">
-                Back to the beginning <span>♡</span>
-            </a>
 
         </section>
 
