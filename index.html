@@ -3,14 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#faf6f0">
+
     <title>For Tonti ♡</title>
+    <meta name="description" content="A little something made especially for Tonti.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .home-hero {
+            min-height: 100vh;
+            padding: 130px 8% 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(232,201,203,.4), transparent 30%),
+                radial-gradient(circle at 90% 80%, rgba(198,164,107,.15), transparent 30%),
+                var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .home-layout {
+            width: 100%;
+            max-width: 1150px;
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            align-items: center;
+            gap: 65px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .home-copy {
+            animation: fadeUp 1s ease both;
+        }
+
+        .home-copy .eyebrow {
+            justify-content: flex-start;
+            margin-bottom: 35px;
+        }
+
+        .home-copy h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--burgundy);
+            font-size: clamp(75px, 9vw, 120px);
+            line-height: .98;
+            font-weight: 400;
+            letter-spacing: -5px;
+        }
+
+        .home-copy h1 em {
+            color: var(--rose);
+            font-weight: 400;
+        }
+
+        .home-copy .intro {
+            margin: 30px 0;
+            max-width: 420px;
+            font-size: 14px;
+            line-height: 2.1;
+            color: var(--muted);
+        }
+
+        .home-caption {
+            margin-top: 30px;
+            font-size: 9px;
+            letter-spacing: 3px;
+            color: var(--muted);
+        }
+
+        .home-caption span {
+            color: var(--champagne);
+            margin: 0 8px;
+        }
+
+        .letter-frame {
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 35px;
+            position: relative;
+            background: #ead5d2;
+            animation: fadeUp 1.2s ease both;
+        }
+
+        .letter-frame::before {
+            content: "";
+            position: absolute;
+            inset: 17px;
+            border: 1px solid rgba(255,255,255,.75);
+        }
+
+        .letter-card {
+            width: 100%;
+            min-height: 400px;
+            padding: 55px 35px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: var(--ivory);
+            box-shadow: 0 20px 60px rgba(67,28,41,.12);
+            position: relative;
+            z-index: 1;
+        }
+
+        .letter-small {
+            color: var(--champagne);
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+        }
+
+        .letter-card h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--burgundy);
+            font-size: clamp(34px, 4vw, 49px);
+            font-weight: 400;
+            line-height: 1.25;
+        }
+
+        .letter-card h2 em {
+            color: var(--rose);
+        }
+
+        .letter-line {
+            width: 45px;
+            height: 1px;
+            background: var(--champagne);
+            margin: 28px 0;
+        }
+
+        .letter-card p {
+            max-width: 230px;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 2;
+        }
+
+        .letter-heart {
+            color: var(--rose);
+            font-size: 26px;
+            margin-top: 28px;
+        }
+
+        .home-decoration {
+            position: absolute;
+            color: var(--champagne);
+            opacity: .65;
+            font-size: 35px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .decoration-one {
+            top: 20%;
+            left: 5%;
+        }
+
+        .decoration-two {
+            bottom: 15%;
+            right: 5%;
+            animation-delay: 2s;
+        }
+
+        .home-scroll {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 8px;
+            letter-spacing: 4px;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        .home-scroll span {
+            display: block;
+            color: var(--champagne);
+            font-size: 19px;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 800px) {
+            .home-hero {
+                padding: 130px 7% 90px;
+            }
+
+            .home-layout {
+                grid-template-columns: 1fr;
+                gap: 55px;
+                max-width: 550px;
+            }
+
+            .home-copy {
+                text-align: center;
+            }
+
+            .home-copy .eyebrow {
+                justify-content: center;
+            }
+
+            .home-copy h1 {
+                font-size: clamp(75px, 16vw, 105px);
+            }
+
+            .home-copy .intro {
+                margin: 25px auto;
+            }
+
+            .letter-frame {
+                min-height: 390px;
+            }
+
+            .letter-card {
+                min-height: 320px;
+                padding: 40px 25px;
+            }
+
+            .home-caption {
+                margin-top: 25px;
+            }
+
+            .home-scroll {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .home-copy h1 {
+                font-size: 76px;
+            }
+
+            .home-copy .intro {
+                font-size: 13px;
+            }
+
+            .letter-frame {
+                padding: 25px;
+                min-height: 350px;
+            }
+
+            .letter-card {
+                min-height: 290px;
+            }
+
+            .letter-card h2 {
+                font-size: 36px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -24,43 +275,81 @@
     </header>
 
     <main>
-        <section class="hero">
 
-            <div class="hero-content">
+        <section class="home-hero">
 
-                <p class="eyebrow">
-                    <span></span>
-                    A LITTLE SOMETHING FOR YOU
-                    <span></span>
-                </p>
+            <div class="home-layout">
 
-                <h1>
-                    Hey,<br>
-                    <em>Tonti.</em>
-                </h1>
+                <div class="home-copy">
 
-                <p class="intro">
-                    I've been wanting to tell you something,
-                    and I thought this would be a special
-                    way to do it.
-                </p>
+                    <p class="eyebrow">
+                        <span></span>
+                        A LITTLE SOMETHING FOR YOU
+                        <span></span>
+                    </p>
 
-                <a class="button" href="story.html">
-                    I made something for you <span>→</span>
-                </a>
+                    <h1>
+                        Hey,<br>
+                        <em>Tonti.</em>
+                    </h1>
+
+                    <p class="intro">
+                        Some things are better expressed in a special way.
+                        So I put a little something together for you.
+                        Take your time, explore, and enjoy every bit of it.
+                    </p>
+
+                    <a class="button" href="story.html">
+                        Discover your surprise <span>→</span>
+                    </a>
+
+                    <p class="home-caption">
+                        MADE ESPECIALLY FOR YOU
+                        <span>✦</span>
+                        WITH LOVE
+                    </p>
+
+                </div>
+
+                <div class="letter-frame">
+
+                    <div class="letter-card">
+
+                        <span class="letter-small">
+                            A PERSONAL NOTE
+                        </span>
+
+                        <h2>
+                            To someone<br>
+                            <em>very special.</em>
+                        </h2>
+
+                        <div class="letter-line"></div>
+
+                        <p>
+                            A little collection of thoughts,
+                            memories and feelings, all put
+                            together just for you.
+                        </p>
+
+                        <span class="letter-heart">♡</span>
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <span class="float float-one">♡</span>
-            <span class="float float-two">✦</span>
-            <span class="float float-three">♡</span>
+            <span class="home-decoration decoration-one">✦</span>
+            <span class="home-decoration decoration-two">♡</span>
 
-            <div class="scroll-note">
-                MADE ESPECIALLY FOR YOU
+            <div class="home-scroll">
+                A LITTLE JOURNEY AWAITS
                 <span>↓</span>
             </div>
 
         </section>
+
     </main>
 
     <footer>
