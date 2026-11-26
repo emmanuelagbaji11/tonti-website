@@ -3,15 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#faf6f0">
 
     <title>One Last Question | For Tonti ♡</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .question-section {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 22px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .question-section::before,
+        .question-section::after {
+            content: "♡";
+            position: absolute;
+            color: var(--dusty-rose);
+            opacity: 0.35;
+            font-family: 'Playfair Display', serif;
+            pointer-events: none;
+        }
+
+        .question-section::before {
+            font-size: 110px;
+            top: 12%;
+            left: 8%;
+            transform: rotate(-18deg);
+        }
+
+        .question-section::after {
+            font-size: 85px;
+            bottom: 12%;
+            right: 9%;
+            transform: rotate(18deg);
+        }
+
+        .question-card {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 750px;
+            padding: 65px 45px;
+            background: var(--ivory);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            border-radius: 5px;
+        }
+
+        .question-eyebrow {
+            color: var(--champagne);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+        }
+
+        .question-eyebrow span {
+            display: inline-block;
+            width: 25px;
+            height: 1px;
+            background: var(--champagne);
+            vertical-align: middle;
+            margin: 0 9px 3px;
+        }
+
+        .question-heart {
+            width: 66px;
+            height: 66px;
+            margin: 0 auto 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--dusty-rose);
+            border-radius: 50%;
+            color: var(--rose);
+            font-size: 31px;
+            animation: gentlePulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes gentlePulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.08);
+            }
+        }
+
+        .question-card h1 {
+            color: var(--burgundy);
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(38px, 7vw, 64px);
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .question-card h1 em {
+            color: var(--rose);
+            font-weight: 400;
+        }
+
+        .question-intro {
+            max-width: 470px;
+            margin: 0 auto;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .question-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 13px;
+            margin: 32px 0;
+        }
+
+        .question-divider span {
+            width: 45px;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .question-divider i {
+            color: var(--champagne);
+            font-size: 15px;
+            font-style: normal;
+        }
+
+        .answer-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .answer-buttons .button {
+            min-width: 190px;
+            justify-content: center;
+            padding: 15px 24px;
+        }
+
+        .answer-buttons .button-secondary {
+            background: transparent;
+            color: var(--burgundy);
+            border: 1px solid var(--dusty-rose);
+        }
+
+        .answer-buttons .button-secondary:hover {
+            background: var(--light-orange);
+            border-color: var(--rose);
+        }
+
+        .question-note {
+            margin-top: 35px;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .question-signature {
+            margin-top: 45px;
+            color: var(--champagne);
+            font-family: 'Playfair Display', serif;
+            font-size: 17px;
+            font-style: italic;
+        }
+
+        @media (max-width: 600px) {
+            .question-section {
+                padding: 55px 17px 75px;
+                min-height: auto;
+            }
+
+            .question-card {
+                padding: 48px 22px;
+            }
+
+            .question-section::before {
+                left: -15px;
+                top: 5%;
+                font-size: 75px;
+            }
+
+            .question-section::after {
+                right: -10px;
+                bottom: 5%;
+                font-size: 65px;
+            }
+
+            .answer-buttons {
+                flex-direction: column;
+                width: 100%;
+                align-items: stretch;
+            }
+
+            .answer-buttons .button {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -28,39 +235,53 @@
 
         <section class="question-section">
 
-            <p class="eyebrow">
-                <span></span>
-                I'VE BEEN WANTING TO ASK YOU
-                <span></span>
-            </p>
+            <div class="question-card">
 
-            <div class="question-heart">♡</div>
+                <p class="question-eyebrow">
+                    <span></span>
+                    I'VE BEEN WANTING TO ASK YOU
+                    <span></span>
+                </p>
 
-            <h1 class="page-title">
-                Tonti, will you<br>
-                <em>be my girlfriend?</em>
-            </h1>
+                <div class="question-heart">♡</div>
 
-            <p class="section-intro">
-                I know we've already shared so many lovely moments,
-                but I'd really love to make this official.
-            </p>
+                <h1>
+                    Tonti, will you<br>
+                    <em>be my girlfriend?</em>
+                </h1>
 
-            <div class="answer-buttons">
+                <p class="question-intro">
+                    I know we've already shared so many lovely moments,
+                    but I'd really love to make this official.
+                </p>
 
-                <a href="answer.html" class="button">
-                    Yes, I'd love to ♡
-                </a>
+                <div class="question-divider">
+                    <span></span>
+                    <i>♡</i>
+                    <span></span>
+                </div>
 
-                <a href="answer.html" class="button button-secondary">
-                    Absolutely yes! ♡
-                </a>
+                <div class="answer-buttons">
+
+                    <a href="answer.html" class="button">
+                        Yes, I'd love to ♡
+                    </a>
+
+                    <a href="answer.html" class="button button-secondary">
+                        Absolutely yes! ♡
+                    </a>
+
+                </div>
+
+                <p class="question-note">
+                    Whatever your answer, I'm glad our paths crossed.
+                </p>
+
+                <div class="question-signature">
+                    A little question, with a lot of meaning.
+                </div>
 
             </div>
-
-            <p class="question-note">
-                Whatever your answer, I'm glad our paths crossed.
-            </p>
 
         </section>
 
