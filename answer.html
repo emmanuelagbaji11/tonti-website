@@ -3,98 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#faf6f0">
+    <meta name="theme-color" content="#fcf6f1">
 
     <title>She Said Yes! | For Tonti ♡</title>
+    <meta name="description" content="A little celebration of a special new beginning.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 
     <style>
         .answer-section {
-            min-height: 80vh;
+            min-height: 85vh;
             padding: 75px 22px 100px;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 12% 15%, rgba(232,184,197,0.18), transparent 30%),
+                radial-gradient(circle at 88% 85%, rgba(201,161,92,0.14), transparent 30%);
         }
 
         .answer-card {
             width: 100%;
-            max-width: 760px;
-            padding: 65px 50px;
-            background: var(--ivory);
-            border: 1px solid var(--border);
-            border-radius: 5px;
-            box-shadow: var(--shadow);
+            max-width: 790px;
+            padding: 75px 55px 65px;
+            background: rgba(255,253,250,0.97);
+            border: 1px solid rgba(201,161,92,0.4);
+            border-radius: 4px;
+            box-shadow: 0 25px 70px rgba(72,20,38,0.09);
             position: relative;
             overflow: hidden;
         }
 
-        .answer-card::before,
-        .answer-card::after {
-            content: "♡";
+        .answer-card::before {
+            content: "";
             position: absolute;
-            color: var(--dusty-rose);
-            opacity: 0.3;
-            font-family: 'Playfair Display', serif;
+            inset: 10px;
+            border: 1px solid rgba(232,184,197,0.35);
             pointer-events: none;
         }
 
-        .answer-card::before {
-            top: 12px;
-            left: 18px;
-            font-size: 75px;
-            transform: rotate(-20deg);
-        }
-
         .answer-card::after {
-            bottom: 5px;
-            right: 18px;
-            font-size: 85px;
-            transform: rotate(20deg);
+            content: "♡";
+            position: absolute;
+            top: 12px;
+            right: 25px;
+            color: var(--dusty-rose);
+            opacity: 0.25;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 100px;
+            transform: rotate(15deg);
+            pointer-events: none;
         }
 
         .answer-eyebrow {
             position: relative;
             z-index: 1;
             color: var(--champagne);
-            font-size: 11px;
+            font-family: 'Manrope', sans-serif;
+            font-size: 10px;
             font-weight: 700;
             letter-spacing: 4px;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .answer-eyebrow span {
             display: inline-block;
-            width: 25px;
+            width: 24px;
             height: 1px;
             background: var(--champagne);
             vertical-align: middle;
-            margin: 0 9px 3px;
+            margin: 0 10px 3px;
         }
 
         .celebration-heart {
             position: relative;
             z-index: 1;
-            width: 75px;
-            height: 75px;
-            margin: 0 auto 25px;
+            width: 82px;
+            height: 82px;
+            margin: 0 auto 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--light-orange);
+            background: var(--soft-pink);
             border: 1px solid var(--dusty-rose);
             border-radius: 50%;
             color: var(--rose);
-            font-size: 32px;
-            animation: heartBeat 1.8s ease-in-out infinite;
+            font-size: 35px;
+            animation: heartBeat 2s ease-in-out infinite;
         }
 
         @keyframes heartBeat {
@@ -102,13 +105,13 @@
                 transform: scale(1);
             }
             15% {
-                transform: scale(1.12);
+                transform: scale(1.1);
             }
             30% {
                 transform: scale(1);
             }
             45% {
-                transform: scale(1.08);
+                transform: scale(1.06);
             }
         }
 
@@ -116,40 +119,41 @@
             position: relative;
             z-index: 1;
             color: var(--burgundy);
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(55px, 9vw, 85px);
-            font-weight: 400;
-            line-height: 1.1;
-            margin-bottom: 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(65px, 10vw, 105px);
+            font-weight: 500;
+            line-height: 0.95;
+            margin-bottom: 25px;
         }
 
         .answer-card h1 em {
             color: var(--rose);
-            font-weight: 400;
+            font-weight: 500;
         }
 
         .answer-intro {
             position: relative;
             z-index: 1;
-            max-width: 450px;
+            max-width: 460px;
             margin: 0 auto;
             color: var(--muted);
-            font-size: 15px;
-            line-height: 1.9;
+            font-family: 'Manrope', sans-serif;
+            font-size: 13px;
+            line-height: 2.1;
         }
 
         .answer-divider {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 13px;
-            margin: 35px 0;
+            gap: 14px;
+            margin: 38px 0;
         }
 
         .answer-divider span {
             width: 48px;
             height: 1px;
-            background: var(--border);
+            background: rgba(201,161,92,0.55);
         }
 
         .answer-divider i {
@@ -161,8 +165,8 @@
         .answer-message {
             position: relative;
             z-index: 1;
-            max-width: 540px;
-            margin: 0 auto 35px;
+            max-width: 550px;
+            margin: 0 auto 38px;
             padding: 35px 38px;
             background: var(--cream);
             border-left: 2px solid var(--champagne);
@@ -171,17 +175,19 @@
 
         .answer-message p {
             color: var(--text);
-            font-size: 14px;
-            line-height: 2;
-            margin-bottom: 19px;
+            font-family: 'Manrope', sans-serif;
+            font-size: 13px;
+            line-height: 2.1;
+            margin-bottom: 20px;
         }
 
         .answer-message p:last-child {
             margin-bottom: 0;
             color: var(--burgundy);
-            font-family: 'Playfair Display', serif;
-            font-size: 17px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 23px;
             font-style: italic;
+            line-height: 1.5;
         }
 
         .answer-signature {
@@ -189,49 +195,79 @@
             z-index: 1;
             margin: 0 0 35px;
             color: var(--champagne);
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 25px;
             font-style: italic;
         }
 
         .answer-card .button {
             position: relative;
             z-index: 1;
+            display: inline-flex;
+            justify-content: center;
+            padding: 16px 28px;
+            transition: all 0.3s ease;
+        }
+
+        .answer-card .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(118,36,61,0.16);
         }
 
         .answer-footer-note {
-            margin-top: 30px;
+            position: relative;
+            z-index: 1;
+            margin-top: 35px;
             color: var(--muted);
-            font-size: 10px;
+            font-family: 'Manrope', sans-serif;
+            font-size: 9px;
+            font-weight: 600;
             letter-spacing: 3px;
         }
 
         @media (max-width: 600px) {
             .answer-section {
-                padding: 50px 17px 75px;
                 min-height: auto;
+                padding: 55px 17px 75px;
             }
 
             .answer-card {
-                padding: 48px 22px;
+                padding: 55px 23px 48px;
+            }
+
+            .answer-eyebrow {
+                font-size: 8px;
+                letter-spacing: 2px;
+            }
+
+            .answer-eyebrow span {
+                width: 14px;
+                margin: 0 5px 3px;
+            }
+
+            .answer-card h1 {
+                font-size: clamp(65px, 15vw, 85px);
             }
 
             .answer-message {
-                padding: 27px 22px;
+                padding: 28px 23px;
             }
 
             .answer-message p {
-                font-size: 13px;
+                font-size: 12px;
             }
 
-            .answer-card::before {
-                font-size: 55px;
-                left: 8px;
+            .answer-message p:last-child {
+                font-size: 21px;
             }
 
             .answer-card::after {
-                font-size: 60px;
-                right: 8px;
+                font-size: 70px;
+                right: 12px;
+            }
+
+            .answer-card .button {
+                width: 100%;
             }
         }
     </style>
