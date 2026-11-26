@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#faf6f0">
+    <meta name="theme-color" content="#fcf6f1">
 
     <title>Our Story | For Tonti ♡</title>
     <meta name="description" content="A little story about how it all began.">
@@ -11,59 +11,75 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 
     <style>
         .story-hero {
-            padding: 155px 20px 90px;
+            padding: 155px 20px 100px;
             background:
-                radial-gradient(circle at 10% 10%, rgba(232,201,203,.35), transparent 30%),
-                var(--cream);
+                radial-gradient(circle at 8% 12%, rgba(232,184,197,.35), transparent 30%),
+                radial-gradient(circle at 92% 85%, rgba(201,161,92,.13), transparent 30%),
+                linear-gradient(135deg, #fcf6f1, #fffdfa 60%, #f8e4e8);
             min-height: 100vh;
         }
 
         .story-container {
-            max-width: 900px;
+            max-width: 960px;
             margin: auto;
         }
 
         .story-heading {
             text-align: center;
-            margin-bottom: 55px;
+            margin-bottom: 65px;
         }
 
         .story-heading .eyebrow {
             margin-bottom: 28px;
+            color: var(--wine);
+            font-family: 'Manrope', sans-serif;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 3px;
         }
 
         .story-heading .page-title {
-            font-size: clamp(43px, 7vw, 75px);
+            font-family: 'Cormorant Garamond', serif !important;
+            color: var(--deep-burgundy);
+            font-size: clamp(48px, 7vw, 82px);
+            font-weight: 500;
+            line-height: .98;
+        }
+
+        .story-heading .page-title em {
+            color: var(--rose);
+            font-weight: 500;
         }
 
         .story-subtitle {
             color: var(--muted);
-            font-size: 12px;
+            font-family: 'Manrope', sans-serif;
+            font-size: 11px;
             letter-spacing: 1px;
-            margin-top: 20px;
+            margin-top: 22px;
         }
 
         .story-letter {
-            max-width: 760px;
+            max-width: 780px;
             margin: auto;
-            padding: 65px 75px;
+            padding: 75px 85px;
             background: var(--ivory);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
+            border: 1px solid rgba(201,161,92,.35);
+            box-shadow: 0 25px 75px rgba(72,20,38,.09);
             position: relative;
         }
 
         .story-letter::before {
             content: "";
             position: absolute;
-            inset: 13px;
-            border: 1px solid rgba(198,164,107,.25);
+            inset: 14px;
+            border: 1px solid rgba(201,161,92,.28);
             pointer-events: none;
         }
 
@@ -71,37 +87,45 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 45px;
+            gap: 15px;
+            margin-bottom: 50px;
+            padding-bottom: 22px;
+            border-bottom: 1px solid rgba(201,161,92,.3);
             position: relative;
         }
 
         .letter-top span {
+            font-family: 'Manrope', sans-serif;
             font-size: 9px;
             letter-spacing: 3px;
             color: var(--champagne);
-            font-weight: 700;
+            font-weight: 800;
         }
 
         .letter-top .letter-date {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-style: italic;
-            font-size: 15px;
+            font-size: 19px;
             letter-spacing: 0;
             color: var(--rose);
         }
 
         .story-letter p {
             color: var(--muted);
-            font-size: 14px;
-            line-height: 2.25;
-            margin-bottom: 25px;
+            font-family: 'Manrope', sans-serif;
+            font-size: 13px;
+            line-height: 2.3;
+            margin-bottom: 27px;
             position: relative;
         }
 
         .story-letter p:first-of-type {
             color: var(--burgundy);
-            font-family: 'Playfair Display', serif;
-            font-size: 23px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 31px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 30px;
         }
 
         .story-letter p:last-of-type {
@@ -109,16 +133,16 @@
         }
 
         .letter-signature {
-            margin-top: 45px;
+            margin-top: 50px;
             padding-top: 30px;
-            border-top: 1px solid var(--border);
+            border-top: 1px solid rgba(201,161,92,.3);
             position: relative;
         }
 
         .letter-signature span {
             display: block;
-            font-family: 'Playfair Display', serif;
-            font-size: 23px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 30px;
             font-style: italic;
             color: var(--burgundy);
         }
@@ -127,25 +151,63 @@
             display: block;
             margin-top: 10px;
             color: var(--champagne);
+            font-family: 'Manrope', sans-serif;
             font-size: 9px;
+            font-weight: 800;
             letter-spacing: 3px;
         }
 
         .story-closing {
             text-align: center;
-            margin: 60px auto 0;
+            margin: 75px auto 0;
         }
 
         .story-closing p {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(24px, 4vw, 34px);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(30px, 4vw, 43px);
             font-style: italic;
-            color: var(--burgundy);
-            margin-bottom: 30px;
+            font-weight: 500;
+            color: var(--deep-burgundy);
+            margin-bottom: 25px;
         }
 
         .story-closing .ending-heart {
-            margin-bottom: 25px;
+            display: inline-block;
+            color: var(--rose);
+            font-size: 27px;
+            margin-bottom: 28px;
+        }
+
+        .story-closing .button {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            padding: 17px 27px;
+            border-radius: 3px;
+            background: var(--burgundy);
+            color: var(--ivory);
+            font-family: 'Manrope', sans-serif;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-decoration: none;
+            box-shadow: 0 12px 30px rgba(72,20,38,.15);
+            transition: .3s ease;
+        }
+
+        .story-closing .button:hover {
+            background: var(--deep-burgundy);
+            transform: translateY(-4px);
+            box-shadow: 0 17px 35px rgba(72,20,38,.22);
+        }
+
+        .story-closing .button span {
+            font-size: 18px;
+            transition: transform .3s ease;
+        }
+
+        .story-closing .button:hover span {
+            transform: translateX(5px);
         }
 
         @media (max-width: 650px) {
@@ -154,24 +216,34 @@
             }
 
             .story-heading {
-                margin-bottom: 38px;
+                margin-bottom: 42px;
             }
 
             .story-heading .page-title {
-                font-size: 43px;
+                font-size: 48px;
+            }
+
+            .story-subtitle {
+                font-size: 10px;
+                line-height: 1.8;
             }
 
             .story-letter {
-                padding: 45px 27px;
+                padding: 48px 28px;
+            }
+
+            .story-letter::before {
+                inset: 9px;
             }
 
             .story-letter p {
-                font-size: 13px;
-                line-height: 2.1;
+                font-size: 12px;
+                line-height: 2.15;
+                margin-bottom: 23px;
             }
 
             .story-letter p:first-of-type {
-                font-size: 21px;
+                font-size: 27px;
             }
 
             .letter-top {
@@ -179,12 +251,46 @@
             }
 
             .letter-top span {
-                font-size: 8px;
+                font-size: 7px;
                 letter-spacing: 2px;
             }
 
             .letter-top .letter-date {
-                font-size: 13px;
+                font-size: 16px;
+            }
+
+            .letter-signature {
+                margin-top: 38px;
+            }
+
+            .story-closing {
+                margin-top: 55px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .story-heading .page-title {
+                font-size: 41px;
+            }
+
+            .story-letter {
+                padding: 42px 23px;
+            }
+
+            .letter-top span {
+                font-size: 6px;
+                letter-spacing: 1.5px;
+            }
+
+            .letter-top .letter-date {
+                font-size: 14px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .story-closing .button,
+            .story-closing .button span {
+                transition: none;
             }
         }
     </style>
